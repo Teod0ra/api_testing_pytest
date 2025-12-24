@@ -17,7 +17,8 @@ def test_get_users(users_client):
 ])
 def test_required_fields_are_not_empty(users_client, field):
     response = users_client.get_users()
-    for user in response:
+    data = response.json()
+    for user in data:
         assert user[field], f"{field} field is required field and should not be empty"
 
 
@@ -26,5 +27,6 @@ def test_required_fields_are_not_empty(users_client, field):
 ])
 def test_str_fields(users_client, field):
     response = users_client.get_users()
-    for user in response:
+    data = response.json()
+    for user in data:
         assert isinstance(user[field], str), f"{field} should be String."
