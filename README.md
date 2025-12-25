@@ -82,10 +82,6 @@ This framework uses **pytest** for running API tests. Follow the instructions be
 
 Make sure you have **Python 3.10+** installed. Then install required packages:
 
-```
-pip install -r requirements.txt
-````
-
 **!** It’s recommended to use a virtual environment to avoid conflicts with system packages.
 #### Create virtual environment
 ```bash
@@ -122,3 +118,6 @@ pytest -k "users_creation" -v
 ````bash
 pytest -k "users_list" -v
 ````
+
+### Test runned locally
+![](api-test-running.gif)
